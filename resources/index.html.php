@@ -84,15 +84,16 @@
                         </p>
                     </div>
                     <p>
-                        This is PHP package repository Packagist.org mirror site.
+                        這是位在台灣的 Packagist.org 鏡像站
                     </p>
                     <p>
-                        If you're using PHP Composer, commands like <mark class="default">create-project</mark>, <mark class="default">require</mark>, <mark class="default">update</mark>, <mark class="default">remove</mark> are often used.
-                        When those commands are executed, Composer will download information from the packages that are needed also from dependent packages. The number of json files downloaded depends on the complexity of the packages which are going to be used.
-                        The further you are from the location of the packagist.org server, the more time is needed to download json files. By using mirror, it will help save the time for downloading because the server location is closer.
+                        如果你正在使用 PHP Composer, 之指令 ，像是 <mark class="default">create-project</mark>, <mark class="default">require</mark>, <mark class="default">update</mark>, <mark class="default">remove</mark>。
+                        當執行上述指令時, Composer 將會從下載相關套件資訊以及多個描述套件相依的JSON檔案。
+                        如果你所在的位置離主 packagist.org 鏡像站較遠的話, 需要較多的時間下載上述的JSON檔案。
+                        如果使用這個 mirror 站位址, 因為離此鏡像位址較近，將會在下載上述的JSON檔案上節省時間。
                     </p>
                     <p>
-                        Please do the following command to change the PHP Composer config to use this site as default Composer repository.
+                        請參照下列的指令來改變 PHP Composer 設定並把此鏡像站設定為主要的Composer儲存庫：
                     </p>
                     <div class="tabs stacked">
                         <input type="radio" name="accordion" id="enable" checked aria-hidden="true">
