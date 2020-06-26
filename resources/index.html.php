@@ -114,6 +114,10 @@
                         </div>
                     </div>
 
+                    <p>
+                        第二鏡像網站在此：<a href="https://repo1.packagist.tw">repo1.packagist.tw</a>，歡迎多加利用！
+                    </p>
+
                     <h2>World Map of all mirrors</h2>
                         <p>
                             All mirrors, the colors represent <a href="https://packagist.com.br/network.svg" target="_blank">the topology</a> drawn here. Check <a href="https://status.packagist.com.br" target="_blank">status page</a> for health mirror's.
