@@ -115,7 +115,16 @@
                     </div>
 
                     <p>
-                        第二鏡像網站在此：<a href="https://repo1.packagist.tw">repo1.packagist.tw</a>，歡迎多加利用！
+                        目前台灣鏡像網站列表：
+                    </p>
+                    <p>
+                        主鏡像：<a href="https://repo1.packagist.tw">repo1.packagist.tw</a>
+                    </p>
+                    <p>
+                        第二鏡像：<a href="https://repo1.packagist.tw">packagist.tw</a>
+                    </p>
+                    <p>
+                        歡迎多加利用！
                     </p>
 
                     <h2>World Map of all mirrors</h2>
