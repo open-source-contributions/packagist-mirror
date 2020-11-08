@@ -121,9 +121,6 @@
                         主鏡像：<a href="https://packagist.tw">packagist.tw</a>
                     </p>
                     <p>
-                        第二鏡像：<a href="https://repo1.packagist.tw">repo1.packagist.tw</a>
-                    </p>
-                    <p>
                         歡迎多加利用！
                     </p>
 
