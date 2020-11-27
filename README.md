@@ -11,6 +11,10 @@
 
 ❤️ [Recommended by packagist.org](https://packagist.org/mirrors) ❤️
 
+## Announcement: [Composer 2 is now available!](https://blog.packagist.com/composer-2-0-is-now-available/)
+
+**This mirror is for Composer 1; Composer 2 is very fast on its own. We will update to support the version 2 for those need solve the slow internet access or availability problem with the main repository.**
+
 A mirror for [packagist.org](packagist.org) that regularly caches packages from one or more main mirrors to add to a distributed package repository.
 
 ![Mirror creation](/resources/public/logo.svg)
@@ -21,7 +25,7 @@ If you're using [PHP Composer](https://getcomposer.org/), commands like *create-
 
 This project aims to create a local mirror with ease, allowing greater availability for companies/countries that want to use composer without depending on the infrastructure of third parties. It is also possible to create a public mirror to reduce the load on the main repository and better distribute requests around the world, helping make the packagist ecosystem faster as a whole!
 
-When creating a mirror, you add a list of other mirrors to use for initial sync, which pulls all packages to your local machine.   After the mirror is created and synced, the next runs will only pull updates.  If any mirror fails to deliver a metadata file, the client will fallback to its configured main mirror, whether that be packagist.org or otherwise. If the client encounters an installation problem or loses connection to a mirror, it can return from where it stopped running. 
+When creating a mirror, you add a list of other mirrors to use for initial sync, which pulls all packages to your local machine.   After the mirror is created and synced, the next runs will only pull updates.  If any mirror fails to deliver a metadata file, the client will fallback to its configured main mirror, whether that be packagist.org or otherwise. If the client encounters an installation problem or loses connection to a mirror, it can return from where it stopped running.
 
 ![Mirror creation](/resources/public/mirror-creation.gif)
 
@@ -37,6 +41,9 @@ When creating a mirror, you add a list of other mirrors to use for initial sync,
 |China|[php.cnpkg.org](https://php.cnpkg.org)|[Eagle Wu](https://github.com/wudi)|[fork](https://github.com/cnpkg/packagist-mirror)|Every minute|[Q3'18](https://github.com/cnpkg/packagist-mirror/commits/master)
 |China|[packagist.mirrors.sjtug.sjtu.edu.cn](https://packagist.mirrors.sjtug.sjtu.edu.cn)|[Shanghai Jiao Tong University](https://github.com/sjtug)|[fork](https://github.com/sjtug/packagist-mirror)|Every hour|[Q2'19](https://github.com/sjtug/packagist-mirror/commits/master)
 |Czech Republic|[packagist.hostuj.to](https://packagist.hostuj.to)|[HOSTUJ TO](https://hostuj.to)|fork|Every 5 minutes|🆕Q1'20
+|Finland|[packagist.fi](https://packagist.fi)|[Niko Granö](https://xn--gran-8qa.fi)|fork|Continuously|🆕Q2'20
+|France|[packagist.fr](https://packagist.fr)|[Baptiste Pillot](https://github.com/baptistepillot)|[fork](https://github.com/bappli/packagist-mirror)|Every minute|🆕[Q4'20](https://github.com/bappli/packagist-mirror/commits/master)
+|Germany|[packagist.hesse.im](https://packagist.hesse.im)|[Benjamin Hesse](https://hesse.im)|[fork](https://github.com/42656e/packagist-mirror)|Every minute|🆕Q3'20
 |India |[packagist.in](https://packagist.in) |[Varun Sridharan](https://github.com/varunsridharan)|fork|Every minute|[Q2'19](https://www.registry.in/whois)
 |India|[packagist.vrkansagara.in](https://packagist.vrkansagara.in/packages.json)|[Vallabh Kansagara](https://github.com/vrkansagara)|[fork](https://github.com/vrkansagara/packagist-mirror)|Every 5 minutes|[Q4'19](https://packagist.vrkansagara.in/packages.json)|
 |Indonesia|[packagist.phpindonesia.id](https://packagist.phpindonesia.id) |[Indra Gunawan](https://github.com/IndraGunawan)|fork|Every 30 seconds|[Q3'18](https://github.com/IndraGunawan/packagist-mirror/commits/master)
@@ -46,8 +53,9 @@ When creating a mirror, you add a list of other mirrors to use for initial sync,
 |South Africa|[packagist.co.za](https://packagist.co.za)|[SolidWorx](https://github.com/SolidWorx)|fork|Every 5 minutes|[Q3'18](http://co.za/cgi-bin/whois.sh?Domain=packagist.co.za&Enter=Enter)
 |South Korea|[packagist.kr](https://packagist.kr)|[PackagistKR](https://github.com/packagistkr)|[fork](https://github.com/packagistkr/packagist-mirror)|Every minute|[Q3'18](https://github.com/packagistkr/packagist-mirror/issues)
 |Thailand|[packagist.mycools.in.th](https://packagist.mycools.in.th)|[Jarak Kritkiattisak](https://github.com/mycools)|[fork](https://github.com/mycools/packagist-mirror)|Every 5 minutes|[Q4'19](https://github.com/mycools/packagist-mirror/commits/master)
-|USA|[packagist-mirror.wmflabs.org](https://packagist-mirror.wmflabs.org) |[Wikimedia](https://www.wikimedia.org/)|fork|Every 5 minutes|[Q3'18](https://phabricator.wikimedia.org/T203529)
+|USA|[packagist-mirror.wmcloud.org](https://packagist-mirror.wmcloud.org) |[Wikimedia](https://www.wikimedia.org/)|fork|Every 5 minutes|[Q3'18](https://phabricator.wikimedia.org/T203529)
 |Taiwan|[packagist.tw](https://packagist.tw) |[Peter](https://github.com/peter279k)|[fork](https://github.com/open-source-contributions/packagist-mirror)|Every 5 minutes|🆕Q2'20
+|Vietnam|[packagist.ondinh.net](https://packagist.ondinh.net/) |[Long Nguyen](https://github.com/olragon)|[main](https://github.com/Webysther/packagist-mirror)|Every 5 minutes|🆕Q3'20
 
 ⚠️ Not based on this [source code](https://github.com/Webysther/packagist-mirror):
 
@@ -88,7 +96,7 @@ There are currently three supported methods for creating your own mirror.
 - [Docker + Nginx + PHP](#docker-nginx-php) - Docker for cron jobs, Nginx + PHP on the host.
 - [Nginx + PHP](#nginx-php) - Cron + Nginx + PHP all running on the host.
 
-In all three methods, you need to clone the repository and copy `.env.example` to `.env` and modify to include your values instead of the defaults. 
+In all three methods, you need to clone the repository and copy `.env.example` to `.env` and modify to include your values instead of the defaults.
 
 ```bash
 # Clone this repository
@@ -214,10 +222,8 @@ $ vendor/bin/phpunit
 
 ## 💙 Other correlated projects
 
-- [prestissimo](https://github.com/hirak/prestissimo) Downloads packages in parallel to speed up the installation process.
+- [composer/mirror](https://github.com/composer/mirror) The official composer mirrorring script (used for official packagist.org mirrors)
 - [composer-mirror](https://github.com/zencodex/composer-mirror) Create a mirror (open sourced code but not maintained)
-- [packagist-mirror](https://github.com/IndraGunawan/packagist-mirror) Create a mirror (outdated)
-- [packagist-crawler](https://github.com/hirak/packagist-crawler) Create a mirror (outdated)
 - [composer-registry-manager](https://github.com/slince/composer-registry-manager) Easily switch to the composer repository you want
 - [packagist-bot](https://github.com/kawax/packagist-bot) Yet Another Packagist Mirror
 - [twity](https://github.com/julienj/twity) Provide a web based management of private and public composer packages.
